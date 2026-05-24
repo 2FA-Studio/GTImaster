@@ -180,7 +180,8 @@ class RealTimeDetector:
             if not self.is_batch_mode:
                 time.sleep(self.detection_delay)
             else:
-                time.sleep(0.15)
+                # time.sleep(0.15)
+                time.sleep(0.05)
             img = self.capture_fast(self.HAFV_BALANCE_BOX)
 
             img = img.filter(ImageFilter.SHARPEN)
@@ -383,7 +384,7 @@ class RealTimeDetector:
                         time.sleep(0.05)
                         pyautogui.click()
                         time.sleep(0.2)
-                    time.sleep(0.1)
+                    # time.sleep(0.1)
             except Exception as e:
                 if callback:
                     callback(f"发生错误：{str(e)}")
